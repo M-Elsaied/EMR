@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "yrsnuels",
+    "password": "ccb1ZVhMNkgeWs7e_ldyTBJpaA1mpQeE",
+    "database": "yrsnuels",
+    "host": "snuffleupagus.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "qjrlplqv",
+    "password": "ekoydwBXoXVFn9Oka37SCEdnitqHAV7O",
+    "database": "qjrlplqv",
+    "host": "snuffleupagus.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "nnqcheee",
+    "password": "YqitahTrKCDGDh8TaU54u1a15nbhDfO4",
+    "database": "nnqcheee",
+    "host": "snuffleupagus.db.elephantsql.com",
+    "dialect": "postgres"
+  }
+}
