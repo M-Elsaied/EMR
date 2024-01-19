@@ -1,76 +1,67 @@
 # EMR - Electronic Medical Record System
 
 ## Overview
-The EMR (Electronic Medical Record) system is designed with a microservice architecture to securely collect, store, and manage comprehensive patient health information. This system integrates with other healthcare services and is built for scalability with core functionalities that encompass personal information management, emergency contacts, past doctor details, medical data, and patient history.
 
-## Features
-- Create, view, and manage patient records using a streamlined Streamlit interface.
-- Upload and store medical images like X-rays without additional processing features.
-- Interact with a system adhering to health data privacy and security regulations.
+The EMR (Electronic Medical Record) system is a robust solution designed to manage patient health information through a microservice architecture. It enables healthcare providers to collect, store, and access extensive patient data, integrating seamlessly with other healthcare systems and built with scalability in mind.
+
+### Core Functionalities
+- Manage personal details, emergency contacts, and past doctor information
+- Record and manage comprehensive medical data and history
+- Upload and store medical images
+
+### User-Friendly Interface
+- Streamlit-based frontend for simple and intuitive data input and retrieval
+
+### Security and Compliance
+- Adheres to health data privacy and security best practices
 
 ## User Stories
-- Healthcare providers can manage various aspects of patient information through the system.
-- Backend services ensure secure and efficient handling of patient data.
+- Healthcare providers enter and manage patient data
+- Secure upload and storage of medical imagery
+- Easy access to patient records and medical histories
 
 ## Technologies
-- Backend development is focused on using Node.js, Express, and Sequelize.
-- Frontend interaction is facilitated by Streamlit hosted on Streamlit sharing.
-- Data is stored in PostgreSQL, utilizing elephantSQL as the database service.
-- The system's design incorporates Python, Peewee, and Flask for additional functionality.
-- Secure authentication using JSON Web Tokens and bcrypt.
-- Aesthetic design with Bootstrap, along with HTML and CSS3.
-- Data fetching performed with axios.
+- Backend powered by Node.js, Express, Sequelize, PostgreSQL
+- Frontend developed with Streamlit, Bootstrap, HTML, and CSS3
+- Security via JSON Web Tokens and bcrypt
+- Efficient data fetching with axios
+- Data storage on elephantSQL
 
-## Project Structure
-- The `package.json` contains the list of dependencies necessary for the project.
-- `src/app.js` is the entry point to our Express application.
-- Routes are defined in `src/routes/patientRoutes.js` and handled by `src/controllers/patientsController.js`.
-- Patient model is encapsulated in `models/patient.js`.
-- Database configuration is specified in `config/config.json`.
-- `migrations/create-patient.js` handles the creation of the patient's table.
-- The Flask app in `medical_image_service.py` is responsible for handling image uploads. Database model in `models.py`.
+## Current Project Files
+**Important paths and files detailed within the project include:*** `package.json` - Project metadata and dependencies
+* `src/app.js` - Main Express server application
+* `config/config.json` - Database configurations for different environments
+* `models/` - Sequelize models for representing database entities
+* `migrations/` - Database migration files for creating tables
+* `src/controllers/` and `src/routes/` - Express routes and controllers for API endpoints
+* `medical_image_service.py` - Flask service for image upload functionality
+* `.env` - Environment variable definitions
 
-## Configuration
-Place environment variables in the `.env` file, ensuring database connection strings and any other sensitive information are properly set.
+## Getting Started
 
-## Installation
-After cloning the repository, install node modules:
+### Prerequisites
+- Node.js
+- Python
+- PostgreSQL
 
-```bash
-npm install
-```
+### Initial Setup
+- Clone the repository
+- Install dependencies with `npm install`
+- Set up environment variables according to the `.env` schema
 
-Start the backend service:
-
-```bash
-npm start
-```
-
-Start the Streamlit frontend in a separate terminal:
-
-```bash
-streamlit run your_streamlit_app.py
-```
-
-Execute the Flask service for medical image upload:
-
-```bash
-flask run --port=3001
-```
+### Run the Application
+- Start the backend server with `npm start`
+- Launch the Streamlit frontend using `streamlit run streamlit_app.py`
+- Run the Flask service for medical image uploads with `flask run --port=3001`
 
 ## Testing
-Execute a comprehensive suite of tests to validate the system's functions and integration points regularly.
+Regular testing is crucial to ensure the integrity and reliability of the EMR system. See `TESTING.md` (to be created) for guidelines on how to conduct tests.
 
-Ensure accurate and up-to-date documentation to assist in a flawless execution of tests.
+## Contribution
+We welcome contributions! For details on contributing, please see `CONTRIBUTING.md` (to be created).
 
-## Licensing
-This project is licensed under the ISC license.
-
-## Contributing
-Please read `CONTRIBUTING.md` for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Authors
-- Your Name (add more contributors as needed)
+## License
+This project is licensed under the ISC license - see the `LICENSE` file for details.
 
 ## Acknowledgments
-A tip of the hat to everyone who contributed to this project, offered support, and provided feedback.
+Our gratitude extends to all contributors and testers of this project.
