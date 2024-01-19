@@ -1,11 +1,13 @@
 const express = require('express');
 const patientRoutes = require('./routes/patientRoutes');
+const authRoutes = require('./routes/authRoutes');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.json()); // for parsing application/json
+app.use(express.json());
 
-app.use('/api/patients', patientRoutes); // Register patient routes
+app.use('/api/patients', patientRoutes);
+app.use('/api/auth', authRoutes);
 
 app.get('/ping', (req, res) => {
     res.status(200).send('pong');
